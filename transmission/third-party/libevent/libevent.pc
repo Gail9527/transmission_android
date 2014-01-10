@@ -1,0 +1,16 @@
+#libevent pkg-config source file
+
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libevent
+Description: libevent is an asynchronous notification event loop library
+Version: 2.0.15-stable
+Requires:
+Conflicts:
+Libs: -L${libdir} -levent
+Libs.private: -nostdlib -Bdynamic -Wl,-T,/home/williamshi/Desktop/android-source/gingerbread_2/build/core/armelf.x -Wl,-dynamic-linker,/system/bin/linker -Wl,--gc-sections -Wl,-z,nocopyreloc -L/home/williamshi/Desktop/android-source/gingerbread_2/out/target/product/generic/obj/lib -Wl,-z,noexecstack -Wl,-rpath-link=/home/williamshi/Desktop/android-source/gingerbread_2/out/target/product/generic/obj/lib -lc -llog -lcutils -lstdc++ -Wl,--no-undefined /home/williamshi/Desktop/android-source/gingerbread_2/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/lib/gcc/arm-eabi/4.4.3/libgcc.a /home/williamshi/Desktop/android-source/gingerbread_2/out/target/product/generic/obj/lib/crtend_android.o -lm /home/williamshi/Desktop/android-source/gingerbread_2/out/target/product/generic/obj/lib/crtbegin_dynamic.o
+Cflags: -I${includedir}
+
